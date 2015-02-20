@@ -28,6 +28,7 @@ module.exports = function (name, defaults, argv) {
     defaults,
     win ? {} : cc.json(files, join(etc, name, 'config')),
     win ? {} : cc.json(files, join(etc, name + 'rc')),
+    win ? {} : cc.json(files, join(etc, name)),
     home ? cc.json(files, join(home, '.config', name, 'config')) : {},
     home ? cc.json(files, join(home, '.config', name)) : {},
     home ? cc.json(files, join(home, '.' + name, 'config')) : {},
